@@ -58,14 +58,13 @@ public class TaxPayer {
 	}
 
 	public Double salaryTax() {
-		
+
 		if (salaryIncome / 12 < 3000.0) {
 			return 0.0;
 		}
 		if (salaryIncome / 12 < 5000.0) {
 			return salaryIncome * 0.1;
-		} 
-		else {
+		} else {
 
 			return salaryIncome * 0.2;
 		}
@@ -73,7 +72,7 @@ public class TaxPayer {
 	}
 
 	public double gastosDedutiveis() {
-		 return healthSpending + educationSpending;
+		return healthSpending + educationSpending;
 	}
 
 	public Double maximoDedutivel() {
@@ -97,12 +96,12 @@ public class TaxPayer {
 	}
 
 	public Double taxRebate() {
-	if ( gastosDedutiveis() < maximoDedutivel()) {
-		return gastosDedutiveis();
-	}
-	else {
-		return maximoDedutivel();
-	}
+		if (gastosDedutiveis() < maximoDedutivel()) {
+			return gastosDedutiveis();
+		} 
+		else {
+			return maximoDedutivel();
+		}
 	}
 
 	public Double netTax() {
